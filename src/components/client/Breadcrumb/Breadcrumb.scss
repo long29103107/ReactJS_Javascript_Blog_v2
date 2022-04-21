@@ -1,0 +1,19 @@
+.breadcrumb-wrap {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+
+  .breadcrumb {
+    margin: 25px 0 0 0;
+    padding: 0;
+    background: none !important;
+
+    .breadcrumb-item + .breadcrumb-item::before {
+      color: #353535;
+    }
+
+    .breadcrumb-item.active {
+      color: #353535;
+    }
+  }
+}

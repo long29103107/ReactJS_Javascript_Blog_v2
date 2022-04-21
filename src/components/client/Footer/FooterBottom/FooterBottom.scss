@@ -1,0 +1,47 @@
+.footer-bottom {
+  position: relative;
+  padding: 25px 0;
+  background: #000000;
+
+  .copyright {
+    text-align: left;
+
+    p {
+      color: #ffffff;
+      font-weight: 400;
+      margin: 0;
+
+      a {
+        font-weight: 600;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .template-by {
+    text-align: right;
+
+    p {
+      color: #ffffff;
+      font-weight: 400;
+      margin: 0;
+
+      a {
+        font-weight: 600;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768.98px) {
+  .footer-bottom .copyright,
+  .footer-bottom .template-by {
+      text-align: center; 
+  } 
+}

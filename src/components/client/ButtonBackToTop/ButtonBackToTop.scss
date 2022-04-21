@@ -1,0 +1,25 @@
+
+.back-to-top {
+  position: fixed;
+  background: #FF6F61;
+  color: #ffffff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  border-radius: 4px;
+  z-index: 11;
+
+  &:hover {
+    background: #000000;
+  }
+
+  i {
+    padding-top: 9px;
+    color: #ffffff;
+  }
+}
