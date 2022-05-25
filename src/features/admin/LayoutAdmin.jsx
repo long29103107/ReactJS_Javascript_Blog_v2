@@ -1,22 +1,29 @@
-import { Outlet, useLocation } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from 'components/admin/Sidebar';
-import Header from 'components/admin/Header';
-import 'assets/admin/css/nucleo-icons.css';
-import 'assets/admin/css/nucleo-svg.css';
-import './Template.scss';
+import { SidebarProvider } from 'contexts/SidebarContext';
+import MainAdmin from './MainAdmin';
 
 function LayoutAdmin() {
-  const match = useLocation();
+//   const [state, dispatch] = useContext(SidebarContext);
   
+//   useEffect(() => {
+//     function handleResize() {
+//       if(window.innerWidth >= 1200 )
+//       {
+//         dispatch({type: SHOW_SIDEBAR, active: false});
+//       }
+//       else
+//       {
+//         dispatch({type: SHOW_SIDEBAR, active: true});
+//       }
+//     }
+//     window.addEventListener('resize', handleResize)
+//     return () => {
+//       window.removeEventListener('resize', handleResize)
+//     }
+// });
   return (
-    <>
-      <Sidebar />
-      <main className="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
-        <Header />
-        <Outlet />
-      </main>
-    </>
+    <SidebarProvider>
+      <MainAdmin />
+    </SidebarProvider>
   );
 }
 

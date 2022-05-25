@@ -3,6 +3,7 @@ import Loader from 'components/client/Loader';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LayoutClient from 'features/client/Layout';
 import LayoutAdmin from 'features/admin/LayoutAdmin';
+import { SidebarProvider } from "contexts/SidebarContext";
 
 const Home = React.lazy(() => import('./features/client/Home'));
 const BlogDetail = React.lazy(() => import('./features/client/BlogDetail'));
@@ -21,11 +22,12 @@ function App() {
               <Route path='blog/:id/*' element={<BlogDetail />} />
             </Route>
 
-            <Route path='admin' element={<LayoutAdmin />}>
-              <Route path='dashboard/*' element={<Dashboard />} />
-              <Route path='blog/*' element={<BlogAdmin />} />
-              <Route path='category/*' element={<CategoryAdmin />} />
-            </Route>
+            
+              <Route path='admin' element={<LayoutAdmin />}>
+                <Route path='dashboard/*' element={<Dashboard />} />
+                <Route path='blog/*' element={<BlogAdmin />} />
+                <Route path='category/*' element={<CategoryAdmin />} />
+              </Route>
           </Routes>
         </Suspense>
       </BrowserRouter>

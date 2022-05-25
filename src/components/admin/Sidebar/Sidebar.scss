@@ -1,5 +1,54 @@
 .sidenav {
+
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+#sidenav-main {
+  background: white;
+  box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+.sidenav-header {
+  position: relative;
+
+  .close.close-button
+  {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+#sidenav-main {
+  display: none;
+  transition: all .4s ease-in-out;
+
+  &.show {
+    background-color: white;
+    transition: all .4s ease-in-out;
+    display: block;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  #sidenav-main {
+    display: none;
+    transition: all .4s ease-in-out;
+  
+    &.show {
+      background-color: white;
+      transition: all .4s ease-in-out;
+      display: block;
+    }
+  }
+
+  .sidenav-header {
+    transition: all .4s ease-in-out;
+    .close.close-button
+    {
+      display: none;
+      transition: all .4s ease-in-out;
+    }
   }
 }

@@ -1,0 +1,12 @@
+@media (min-width: 1200px)
+{
+  .sidenav.fixed-start + .main-content {
+    margin-left: 17.125rem;
+    transition: all .2s ease-in-out;
+
+    &.collapse-custom{
+      margin-left: 0;
+      transition: all .2s ease-in-out;
+    }
+  }
+}

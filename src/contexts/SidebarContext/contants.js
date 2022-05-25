@@ -1,0 +1,1 @@
+export const SHOW_SIDEBAR = 'show_siderbar';
